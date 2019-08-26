@@ -34,15 +34,15 @@ Contributors
 
 
 ***************
-####Acknowledgement
+Acknowledgement
 ***************
 Website ini dibuat untuk memenuhi tugas besar mata kuliah Implementasi Perangkat Lunak Telkom University
 
 ***************
-#####ERD
+ERD
 ***************
 
 
 ***************
-######USECASE DIAGRAM
+USECASE DIAGRAM
 ***************
