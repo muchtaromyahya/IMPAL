@@ -5,7 +5,7 @@
 
 
 **************************
-##Changelog and New Features
+Changelog and New Features
 **************************
 
 You can find a list of all changes for each release in the `user
@@ -14,14 +14,14 @@ guide change log <https://github.com/bcit-ci/CodeIgniter/blob/develop/user_guide
 
 
 *******
-##License
+License
 *******
 
 Please see the `license
 agreement <https://github.com/bcit-ci/CodeIgniter/blob/develop/user_guide_src/source/license.rst>`_.
 
 *********
-###Contributors
+Contributors
 *********
 
 -  `Muchtarom Yahya <https://github.com/muchtaromyahya>`_
