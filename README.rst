@@ -28,7 +28,7 @@ Contributors
 -  `Gery Nugroho <https://github.com/geryn25>`_
 -  `Hafizh Fadillah RB <https://github.com/HafizhFRB>`_
 -  `Supra Yogi <https://github.com/Yogi162>`_
--  `Arbi Nourman B. <https://github.com/arbinb12> `_
+-  `Arbi Nourman B <https://github.com/arbinb12> `_
 
 
 
