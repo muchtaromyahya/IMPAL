@@ -1,6 +1,6 @@
-
-#SISTEM INFORMASI HOTEL
-
+######################
+SISTEM INFORMASI HOTEL
+######################
 
 
 
