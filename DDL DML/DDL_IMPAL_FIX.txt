@@ -1,0 +1,39 @@
+create table kamar(
+    no_kamar number primary key,
+    harga number
+);
+
+create table admin(
+   username varchar2(100) primary key,
+   password varchar2(100)
+);
+
+create table customer(
+    nik number primary key,
+    nama_cust varchar2(100),
+    status varchar2(50)
+);
+
+create table fasilitas(
+    id_fasilitas varchar2(5) primary key,
+    harga number
+);
+
+
+create table memiliki(
+    no_kamar number,
+    id_fasilitas varchar2(5),
+    nik number,
+ 
+    constraint memiliki_kamar_fk foreign key (no_kamar) references kamar(no_kamar) on delete cascade enable,
+    constraint memiliki__fasilitas_fk foreign key (id_fasilitas) references fasilitas(id_fasilitas) on delete cascade enable,
+    constraint memiliki__customer_fk foreign key (nik) references customer(nik) on delete cascade enable 
+);
+
+create table dilayani(
+    nik number,
+    username varchar2(100),
+
+    constraint dilayani_customer_fk foreign key (nik) references customer(nik) on delete cascade enable,
+    constraint admin_fk foreign key (username) references admin(username) on delete cascade enable
+);		
