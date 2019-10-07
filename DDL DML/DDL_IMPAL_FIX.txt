@@ -9,7 +9,7 @@ create table admin(
 );
 
 create table customer(
-    nik number primary key,
+    nik varchar2(25) primary key,
     nama_cust varchar2(100),
     status varchar2(50)
 );
@@ -20,20 +20,32 @@ create table fasilitas(
 );
 
 
-create table memiliki(
-    no_kamar number,
+create table check_in(
     id_fasilitas varchar2(5),
-    nik number,
+    no_kamar number,
+    nik varchar2(25),
+    admin varchar2(100),
+    tanggal date,
+
  
     constraint memiliki_kamar_fk foreign key (no_kamar) references kamar(no_kamar) on delete cascade enable,
     constraint memiliki__fasilitas_fk foreign key (id_fasilitas) references fasilitas(id_fasilitas) on delete cascade enable,
-    constraint memiliki__customer_fk foreign key (nik) references customer(nik) on delete cascade enable 
+    constraint memiliki__customer_fk foreign key (nik) references customer(nik) on delete cascade enable,
+    constraint memiliki__admin_fk foreign key (admin) references admin(username) on delete cascade enable, 
 );
 
-create table dilayani(
-    nik number,
-    username varchar2(100),
+create table check_out(
+    id_fasilitas varchar2(5),
+    no_kamar number,
+    nik varchar2(25),
+    admin varchar2(100),
+    tanggal date,
 
-    constraint dilayani_customer_fk foreign key (nik) references customer(nik) on delete cascade enable,
-    constraint admin_fk foreign key (username) references admin(username) on delete cascade enable
-);		
+ 
+    constraint memiliki_kamar_fk foreign key (no_kamar) references kamar(no_kamar) on delete cascade enable,
+    constraint memiliki__fasilitas_fk foreign key (id_fasilitas) references fasilitas(id_fasilitas) on delete cascade enable,
+    constraint memiliki__customer_fk foreign key (nik) references customer(nik) on delete cascade enable,
+    constraint memiliki__admin_fk foreign key (admin) references admin(username) on delete cascade enable, 
+);
+
+		
