@@ -1,0 +1,3 @@
+select check_out.nik,check_out.no_kamar,check_in.tanggal AS 'tanggal_check_in',check_out.tanggal AS 'tanggal_check_out' from check_in INNER JOIN check_out on check_in.no_kamar = check_out.no_kamar ;
+
+select nama, no_kamar from check_in INNER JOIN customer on customer.nik = check_in.nik;
