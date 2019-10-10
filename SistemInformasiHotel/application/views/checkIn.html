@@ -10,9 +10,79 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">   
     <title>Document</title>
 </head>
+<style>
+#box{
+    width: 100%;
+    height: 100%;
+    border-radius: 40px;
+    border-style: solid;
+    border-color: white;
+    margin-top: 20%;
+}
+h1{
+    color: white;
+    text-align: center;
+    margin-top: 4%;
+}
+</style>
 <body background="assets/home1.jpeg">
-    <div>
-        
-    </div>
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
+            <div class="container">
+              <a class="navbar-brand js-scroll-trigger" href="#home"><p style="color: beige; ">Hotel Telkom</p></a>
+              <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon" style="color: beige;"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto my-2 my-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#home"><p style="color: beige; ">Home</p></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#checkIn"><p style="color: beige;">Check In</p></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#checkOut"><p style="color: beige;">Check Out</p></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#kamar"><p style="color: beige;">Kamar</p></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#fasilitas"><p style="color: beige;">Fasilitas</p></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#laporan"><p style="color: beige;">Laporan</p></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#setting"><p style="color: beige;">Setting</p></a>
+                  </li>
+                  
+                </ul>
+              </div>
+            </div>
+        </nav>
+        <header class="container">
+            <div id="box" >
+                <h1>Login</h1>
+                <form style="margin:10%;">
+                        <div class="form-group">
+                          <label for="namaLengkap" style="color: white">Nama Lengkap</label>
+                          <input type="text" class="form-control" id="namaLengkap"  placeholder="Nama Lengkap" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="nik" style="color: white">NIK</label>
+                            <input type="text" class="form-control" id="NIK"  placeholder="NIK" required>
+                          </div>
+                        <div class="form-group">
+                          <label for="noKamar" style="color: white">Nomor Kamar</label>
+                          <input type="text" class="form-control" id="noKamar"  placeholder="Nomor Kamar" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="fasilitas" style="color: white">Fasilitas</label>
+                            <input type="text" class="form-control" id="fasilitas"  placeholder="Fasilitas" required>
+                          </div>
+                        <button type="submit" class="btn btn-primary" style="margin-left: 40%; margin-top: 5%">Submit</button>
+                      </form>
+            </div>
+        </header>
 </body>
 </html>
