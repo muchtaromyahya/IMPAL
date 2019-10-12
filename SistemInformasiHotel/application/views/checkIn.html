@@ -26,40 +26,6 @@ h1{
 }
 </style>
 <body background="assets/home1.jpeg">
-        <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
-            <div class="container">
-              <a class="navbar-brand js-scroll-trigger" href="#home"><p style="color: beige; ">Hotel Horizon Bandung </p></a>
-              <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon" style="color: beige;"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ml-auto my-2 my-lg-0">
-                  <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#home"><p style="color: beige; ">Home</p></a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#checkIn"><p style="color: beige;">Check In</p></a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#checkOut"><p style="color: beige;">Check Out</p></a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#kamar"><p style="color: beige;">Kamar</p></a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#fasilitas"><p style="color: beige;">Fasilitas</p></a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#laporan"><p style="color: beige;">Laporan</p></a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#setting"><p style="color: beige;">Setting</p></a>
-                  </li>
-                  
-                </ul>
-              </div>
-            </div>
-        </nav>
         <header class="container">
             <div id="box" >
                 <h1>Data Penginap</h1>
@@ -77,9 +43,17 @@ h1{
                           <input type="text" class="form-control" id="noKamar"  placeholder="Nomor Kamar" required>
                         </div>
                         <div class="form-group">
+                            <label for="fasilitas" style="color: white">Durasi (hari)</label>
+                            <input type="text" class="form-control" id="fasilitas"  placeholder="Durasi" required>
+                        </div>
+                        <div class="form-group">
                             <label for="fasilitas" style="color: white">Fasilitas</label>
                             <input type="text" class="form-control" id="fasilitas"  placeholder="Fasilitas" required>
                           </div>
+                        <div class="form-group">
+                            <label for="fasilitas" style="color: white">Durasi (malam)</label>
+                            <input type="text" class="form-control" id="fasilitas"  placeholder="Durasi" required>
+                        </div>
                         <button type="submit" class="btn btn-primary" style="margin-left: 40%; margin-top: 5%">Submit</button>
                       </form>
             </div>
