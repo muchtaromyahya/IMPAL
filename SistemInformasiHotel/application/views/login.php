@@ -1,14 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <title>Login</title>
+<title>Login</title>
 </head>
 <style>
 p {
@@ -32,27 +25,32 @@ h1{
 }
 
 </style>
-<body  background="assets/home1.jpeg">
+<body  background="<?php echo base_url('application\views\assets\home1.jpeg'); ?>">
+<?php 
+        if ($this->session->flashdata('alert')){
+            $this->load->view('errors/flashdataerror');
+        }
+    ?>
     <div class="container">
         <div style="margin-top:15%; " >
         </div>
             <div class="row">
                 <div class="col-sm-4">
-                    <img src="icon/varian1.png"> 
+                    <img src="<?php echo base_url('application\views\icon\varian1.png'); ?>"> 
                 </div>
                 <div class="col-sm-4"></div>
                 <div class="col-sm-4">
                         <div id="box" >
                             <h1>Login</h1>
-                            <form style="margin:10%;">
+                            <form style="margin:10%;" method="POST" action="<?php echo base_url('Login/signin') ?>">
                                     <div class="form-group">
                                       <label for="exampleInputEmail1" style="color: white">Your Username</label>
-                                      <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" required>
+                                      <input type="text" name="username" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" required>
                                       <small id="emailHelp" class="form-text text-muted" style="color: thistle"> We'll never share your username with anyone else.</small>
                                     </div>
                                     <div class="form-group">
                                       <label for="exampleInputPassword1" style="color: white">Password</label>
-                                      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" required>
+                                      <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password" required>
                                     </div>
                                     <button type="submit" class="btn btn-primary" style="margin-left: 40%; margin-top: 5%">Submit</button>
                                   </form>
