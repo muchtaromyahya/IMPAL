@@ -6,6 +6,10 @@ class FasilitasModel extends CI_Model {
         $result = $this->db->get('fasilitas');
         return $result;
     }
+    public function getalldata() {
+        $result = $this->db->get('fasilitas');
+        return $result;
+    }
 }
 
 ?>

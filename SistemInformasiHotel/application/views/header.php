@@ -22,10 +22,10 @@
                         <a class="nav-link js-scroll-trigger" href="<?php echo base_url('Kamar') ?>"><p style="color: beige;">Kamar</p></a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#fasilitas"><p style="color: beige;">Fasilitas</p></a>
+                        <a class="nav-link js-scroll-trigger" href="<?php echo base_url('Fasilitas') ?>"><p style="color: beige;">Fasilitas</p></a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#laporan"><p style="color: beige;">Laporan</p></a>
+                        <a class="nav-link js-scroll-trigger" href="<?php echo base_url('Laporan') ?>"><p style="color: beige;">Laporan</p></a>
                       </li>
                       <li class="nav-item">
                         <a class="nav-link js-scroll-trigger" href="<?php echo base_url('Login/signout'); ?>"><p style="color: beige;">Logout</p></a>

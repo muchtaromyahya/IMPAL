@@ -26,8 +26,7 @@
         <div id="box">
 
             <?php if ($check) : ?>
-                <form method="POST" action="<?php echo base_url('CheckOut/doCheckOut/');
-                                                echo $data[0]->id ?>" onsubmit="return JSalert();">
+                <form method="POST" action="">
                     <h1 style="margin-bottom: 5%;">Detail Penginap</h1>
                     <div class="row">
                         <div class="col-sm-4">
@@ -66,7 +65,16 @@
                             <label for="fasilitas" style="color: white; margin-right: 43px;">Tanggal Masuk</label>
                         </div>
                         <div class="col-sm-8">
-                            <input type="text" class="form-control" name='tanggalmasuk' id="tanggalmasuk" placeholder="<?php echo $data[0]->tanggal ?>" readonly>
+                            <input type="text" class="form-control" name='tanggalmasuk' id="tanggalmasuk" placeholder="<?php echo $data[0]->tanggal_checkin ?>" readonly>
+                        </div>
+
+                    </div> <br>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <label for="fasilitas" style="color: white; margin-right: 43px;">Tanggal Keluar</label>
+                        </div>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" name='tanggalkeluar' id="tanggalkeluar" placeholder="<?php echo $data[0]->tanggal_checkout ?>" readonly>
                         </div>
 
                     </div> <br>
@@ -89,28 +97,9 @@
                             <input type="text" class="form-control" name='biaya' id="biaya" placeholder="<?php echo "Rp.",number_format($this->CheckOutModel->getbiaya($data[0])) ?>" readonly>
                         </div>
                     </div>
-                    <button type="button" style="margin-left: 40%; margin-top: 5%" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
-          Check Out
+                    <button type="submit" style="margin-left: 40%; margin-top: 5%" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+          print
         </button>
-        <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLongTitle">Konfirmasi</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body">
-                pilih tombol submit apabila anda sudah yakin dengan data yang anda isikan.
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="submit" class="btn btn-primary">Submit</button>
-              </div>
-            </div>
-          </div>
-        </div>
         </div>
 
         </div>

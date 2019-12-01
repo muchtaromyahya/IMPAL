@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
         <head>
-            <title>Data Kamar</title>   
+            <title>Laporan</title>   
             </head>
     <style>
     .title {
@@ -42,6 +42,7 @@
                     <tr>
                         <th>No</th>
                         <th>Nama Lengkap</th>
+                        <th>NIK</th>
                         <th>Kamar</th>
                         <th>Fasilitas</th>
                         <th>Tanggal Masuk</th>
@@ -50,22 +51,24 @@
                         <th>aksi</th>
                     </tr>
                 </thead>
-                <!-- <tbody>
-                <?php $data = $this->KamarModel->getall(); 
+                <tbody>
+                <?php $data = $this->LaporanModel->getalldata(); 
                 $no =1;
                                 foreach($data->result() as $row): ?>
                         <tr>
                             <td><?php echo $no++ ?></td>
+                            <td><?php echo $row->nama ?></td>
+                            <td><?php echo $row->nik ?></td>
                             <td><?php echo $row->no_kamar ?></td>
-                            <td><?php if ($row->terisi == '1') {
-                                echo 'Terisi';
-                            } else {
-                                echo 'Kosong';
-                            } ?></td>
-                            <td>></td>
+                            <td><?php echo $row->id_fasilitas ?></td>
+                            <td><?php echo $row->tanggal_checkin ?></td>
+                            <td><?php echo $row->tanggal_checkout ?></td>
+                            <td><?php echo $row->total_biaya ?></td>
+                            <td><form method="POST" action="<?php echo base_url('Laporan/getDetail/');
+                                                                echo $row->id ?>"><button type="submit" class="btn btn-primary">Detail</button> </form></td>
                         </tr>
                      <?php endforeach; ?>
-                </tbody> -->
+                </tbody>
             </table>
         </div>
     </div>

@@ -41,23 +41,19 @@
                 <thead>
                     <tr>
                         <th>No</th>
-                        <th>No. kamar</th>
-                        <th>Status</th> <!-- berisi keterangan "booked " atau "aviablea"-->
+                        <th>ID Fasilitas</th>
+                        <th>Harga</th> <!-- berisi keterangan "booked " atau "aviablea"-->
                         <!-- <th>aksi</th> -->
                     </tr>
                 </thead>
                 <tbody>
-                <?php $data = $this->KamarModel->getall(); 
+                <?php $data = $this->FasilitasModel->getalldata(); 
                 $no =1;
                                 foreach($data->result() as $row): ?>
                         <tr>
                             <td><?php echo $no++ ?></td>
-                            <td><?php echo $row->no_kamar ?></td>
-                            <td><?php if ($row->terisi == '1') {
-                                echo 'Terisi';
-                            } else {
-                                echo 'Kosong';
-                            } ?></td>
+                            <td><?php echo $row->id_fasilitas ?></td>
+                            <td><?php echo $row->harga ?></td>
                             <!-- <td>></td> -->
                         </tr>
                      <?php endforeach; ?>
