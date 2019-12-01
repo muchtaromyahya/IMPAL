@@ -25,13 +25,13 @@
   <header class="container">
     <div id="box">
       <h1>Data Penginap</h1>
-      <form style="margin-top:10%; margin-left:10%; margin-right:10%; margin-bottom: 3%;" method="POST" action="<?php echo base_url('CheckIn/ambilkamar') ?>">
+      <form id="checkinform" style="margin-top:10%; margin-left:10%; margin-right:10%; margin-bottom: 3%;" method="POST" action="<?php echo base_url('CheckIn/ambilkamar') ?>">
         <div class="row">
           <div class="col-sm-4">
             <label for="namaLengkap" style="color: white">Nama Lengkap</label>
           </div>
           <div class="col-sm-8">
-            <input type="text" class="form-control" name='nama' id="namaLengkap" placeholder="Nama Lengkap" oninvalid="this.setCustomValidity('Nama Lengkap Harus Diisi')" oninput="setCustomValidity('')" required>
+            <input type="text" pattern="[A-Za-z\s]{1,}" class="form-control" name='nama' id="namaLengkap" placeholder="Nama Lengkap" oninvalid="this.setCustomValidity('Nama tidak valid, angka tidak boleh masuk')" oninput="setCustomValidity('')" required>
           </div>
         </div> <br>
         <div class="row">
@@ -39,7 +39,7 @@
             <label for="nik" style="color: white">NIK</label>
           </div>
           <div class="col-sm-8">
-            <input type="text" class="form-control" name='nik' id="NIK" placeholder="NIK" oninvalid="this.setCustomValidity('NIK Harus Diisi')" oninput="setCustomValidity('')" required>
+            <input type="text" class="form-control" pattern="[0-9]{16,16}" name='nik' id="NIK" placeholder="NIK" oninvalid="this.setCustomValidity('NIK Harus Diisi dan 16 angka')" oninput="setCustomValidity('')" required>
           </div>
         </div> <br>
         <div class="row">
@@ -85,11 +85,13 @@
             </select>
           </div>
         </div>
-        <button type="button" style="margin-left: 40%; margin-top: 5%" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+        <!-- <button onclick=""  type="button" style="margin-left: 40%; margin-top: 5%" class="btn btn-primary">
+                Check In</button> -->
+        <button type="button" id="triggerModal" style="margin-left: 40%; margin-top: 5%" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
           Check In
         </button>
         <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-dialog" role="document">
             <div class="modal-content">
               <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalLongTitle">Konfirmasi</h5>
@@ -114,5 +116,6 @@
 
   </header>
 </body>
+
 
 </html>

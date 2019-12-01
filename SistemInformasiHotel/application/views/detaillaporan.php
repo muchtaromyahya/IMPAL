@@ -26,7 +26,7 @@
         <div id="box">
 
             <?php if ($check) : ?>
-                <form method="POST" action="">
+                <form method="POST" action="<?php echo base_url('Laporan/print/'); echo $data[0]->id ?>">
                     <h1 style="margin-bottom: 5%;">Detail Laporan</h1>
                     <div class="row">
                         <div class="col-sm-4">

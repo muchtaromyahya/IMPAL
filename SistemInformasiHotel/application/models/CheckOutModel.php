@@ -19,6 +19,13 @@ class CheckOutModel extends CI_Model {
         }
         return $hari->format('%a');
     }
+    public function gethari2($date1,$date2) {
+        $hari = date_diff(date_create($date1),date_create($date2));
+        if ($hari->format('%a')== '0') {
+            return '1';
+        }
+        return $hari->format('%a');
+    }
     public function getbiaya($data) {
         $hari = $this->CheckOutModel->gethari($data->tanggal);
         $kamar = $this->KamarModel->getkamar($data->no_kamar)->result();
