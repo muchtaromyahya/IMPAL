@@ -45,8 +45,8 @@
 
     .datatable {
         background-color: white;
-        width: 80%;
-        height: 100%;
+        /* width: 80%;
+        height: 100%; */
         margin-left: 10%;
         border-radius: 19px;
         border-color: black;
