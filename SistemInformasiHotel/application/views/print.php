@@ -117,7 +117,7 @@
                         <label class='labels' for="biaya" style="margin-right: 43px;">Total Biaya</label>
                     </div>
                     <div class="col-sm-8">
-                        <input type="text" class="form-control" name='biaya' id="biaya" placeholder="Total biaya" readonly>
+                        <input type="text" class="form-control" name='biaya' id="biaya" placeholder="<?php echo "Rp."; echo number_format($this->CheckOutModel->getbiaya($data[0])) ?>" readonly>
                     </div>
                 </div>
                 <div class="row" style="margin-top: 3%;">
@@ -133,9 +133,9 @@
 
                     </div>
                     <div class="col-sm-4" style="text-align: center;">
-                        <p> bandung - tanggal hari ini 2019</p>
+                        <p> bandung, <?php echo date('Y-m-d'); ?></p>
                         <p>mengetahui</p>
-                        <p style="margin-top: 28%;">Petugas Hotel</p>
+                        <p style="margin-top: 28%;"><?= $_SESSION['name'] ?></p>
                     </div>
                 </div>
         </div>
