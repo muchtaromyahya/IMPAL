@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 01, 2019 at 08:02 AM
+-- Generation Time: Dec 01, 2019 at 11:14 AM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 7.2.12
 
@@ -71,8 +71,10 @@ CREATE TABLE `check_in` (
 --
 
 INSERT INTO `check_in` (`id`, `id_fasilitas`, `no_kamar`, `nik`, `admin`, `tanggal`, `is_checkout`) VALUES
-('11', 'A1', 101, '1452151235', 'admin1', '2019-11-30', 0),
-('fe653e30-1402-11ea-acbb-2cfda181e8aa', 'A1', 102, '12314215125', 'admin1', '2019-12-01', 0);
+('623cb893-141f-11ea-acbb-2cfda181e8aa', 'A1', 101, '1452151235', 'admin1', '2019-12-01', 1),
+('66919b0d-141f-11ea-acbb-2cfda181e8aa', 'A1', 102, '12314215125', 'admin1', '2019-12-01', 1),
+('9f149401-1422-11ea-acbb-2cfda181e8aa', 'D4', 101, '1452151235', 'admin1', '2019-12-01', 1),
+('c30ce455-1422-11ea-acbb-2cfda181e8aa', 'D3', 101, '1452151235', 'admin1', '2019-12-01', 1);
 
 -- --------------------------------------------------------
 
@@ -88,6 +90,16 @@ CREATE TABLE `check_out` (
   `admin` varchar(100) NOT NULL,
   `tanggal` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `check_out`
+--
+
+INSERT INTO `check_out` (`id`, `id_fasilitas`, `no_kamar`, `nik`, `admin`, `tanggal`) VALUES
+('623cb893-141f-11ea-acbb-2cfda181e8aa', 'A1', 101, '1452151235', 'admin1', '2019-12-01'),
+('66919b0d-141f-11ea-acbb-2cfda181e8aa', 'A1', 102, '12314215125', 'admin1', '2019-12-01'),
+('9f149401-1422-11ea-acbb-2cfda181e8aa', 'D4', 101, '1452151235', 'admin1', '2019-12-01'),
+('c30ce455-1422-11ea-acbb-2cfda181e8aa', 'D3', 101, '1452151235', 'admin1', '2019-12-01');
 
 -- --------------------------------------------------------
 
@@ -162,8 +174,8 @@ CREATE TABLE `kamar` (
 --
 
 INSERT INTO `kamar` (`no_kamar`, `harga`, `terisi`) VALUES
-(101, 300000, 1),
-(102, 300000, 1),
+(101, 300000, 0),
+(102, 300000, 0),
 (103, 300000, 0),
 (104, 300000, 0),
 (105, 300000, 0),
@@ -190,12 +202,22 @@ INSERT INTO `kamar` (`no_kamar`, `harga`, `terisi`) VALUES
 --
 
 CREATE TABLE `kwitansi` (
-  `id` int(255) NOT NULL,
+  `id` varchar(128) NOT NULL,
   `nik` varchar(25) NOT NULL,
   `tanggal_checkin` date NOT NULL,
   `tanggal_checkout` date NOT NULL,
   `total_biaya` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `kwitansi`
+--
+
+INSERT INTO `kwitansi` (`id`, `nik`, `tanggal_checkin`, `tanggal_checkout`, `total_biaya`) VALUES
+('623cb893-141f-11ea-acbb-2cfda181e8aa', '1452151235', '2019-12-01', '2019-12-01', 300000),
+('66919b0d-141f-11ea-acbb-2cfda181e8aa', '12314215125', '2019-12-01', '2019-12-01', 300000),
+('9f149401-1422-11ea-acbb-2cfda181e8aa', '1452151235', '2019-12-01', '2019-12-01', 440000),
+('c30ce455-1422-11ea-acbb-2cfda181e8aa', '1452151235', '2019-12-01', '2019-12-01', 390000);
 
 --
 -- Indexes for dumped tables
