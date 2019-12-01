@@ -102,7 +102,7 @@
                 </button>
               </div>
               <div class="modal-body">
-                pilih tombol submit apabila anda sudah yakin dengan data yang anda isikan.
+                Apakah data Checkout di atas sudah benar ?
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
