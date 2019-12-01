@@ -3,6 +3,7 @@
 class CheckInModel extends CI_Model {
     
     public function checkin($data) {
+        $this->db->set('id','UUID()',FALSE);
         $this->db->insert('check_in',$data);
     }
     public function updatecheckin($no_kamar) {

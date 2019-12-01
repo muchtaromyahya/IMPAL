@@ -6,8 +6,8 @@ class CheckIn extends CI_Controller {
     }
 
     public function index() {
-        $this->load->view('header');
         $this->load->view('partial');
+        $this->load->view('header');
         $this->load->view('checkIn');
     }
     public function ambilkamar() {

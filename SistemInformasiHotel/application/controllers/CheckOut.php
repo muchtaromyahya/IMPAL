@@ -2,8 +2,8 @@
 
 class CheckOut extends CI_Controller {
     public function index() {
-        $this->load->view('header');
         $this->load->view('partial');
+        $this->load->view('header');
         $this->load->view('checkOut');
     }
     public function getDetail($id) {
@@ -17,8 +17,8 @@ class CheckOut extends CI_Controller {
         //     'tanggal' => $query->tanggal,
         //     'nama' => $query->nama,
         // ];
-        $this->load->view('header');
         $this->load->view('partial');
+        $this->load->view('header');
         if ($query->num_rows()==1) {
             $passdata['check']=true;
             $passdata['data']=$query->result();
