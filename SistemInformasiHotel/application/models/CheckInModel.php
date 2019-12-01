@@ -5,11 +5,17 @@ class CheckInModel extends CI_Model {
     public function checkin($data) {
         $this->db->set('id','UUID()',FALSE);
         $this->db->insert('check_in',$data);
+        
     }
-    public function updatecheckin($no_kamar) {
-        $data = ['is_chechout' => '1'];
-        $this->db->where('no_kamar',$no_kamar);
-        $this->db->insert('check_in',$data);
+    public function updatecheckin($id) {
+        $data = ['is_checkout' => '1'];
+        $this->db->where('id',$id);
+        $this->db->update('check_in',$data);
+        if ($this->db->affected_rows() > 0) {
+            return true;
+        } else {
+            return false;
+        }
     }
     public function getalldata() {
         return true;

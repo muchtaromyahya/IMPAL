@@ -27,9 +27,24 @@ class CheckOut extends CI_Controller {
             $passdata['check']=false;
         }
         $this->load->view('detailData',$passdata);
+    }
+    public function docheckout($id) {
+        $data = [
+            'id' => $id,
+            'id_fasilitas' => $this->input->post('fasilitas',true),
+            'no_kamar' => $this->input->post('kamar',true),
+            'nik' => $this->input->post('nik',true),
+            'admin' => $_SESSION['username'],
+            'tanggal' => date('Y-m-d')
+        ];
+        if ($this->CheckInModel->updatecheckin($id)) {
+            $this->db->insert('check_out',$data);
+            
+        } 
+        redirect('CheckOut');
         
         
-
+        
 
     }
 }
