@@ -22,6 +22,7 @@
 <body background="<?php echo base_url('application\views\assets\home1.jpeg'); ?>">
     <header class="container">
         <div id="box" >
+            <form>
             <?php if ($check): ?>
             <h1 style="margin-bottom: 5%;">Detail Penginap</h1>
                 <div class="row">
@@ -63,10 +64,14 @@
                     <div class="col-sm-8">
                         <input type="text" class="form-control" name='tanggalmasuk' id="tanggalmasuk"  placeholder="<?php echo $data[0]->tanggal ?>" readonly>
                     </div>
-                </div>
                     </div>
+                        <button type="submit" class="btn btn-primary" style="margin-left: 40%; margin-top: 5%">Submit</button>
+                    </div>
+                </div>
+                    
             </div>
             <?php endif; ?>
+            </form>
         </div>
     </header>
 </body>
