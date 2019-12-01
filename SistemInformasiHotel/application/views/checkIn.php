@@ -22,7 +22,7 @@ h1{
         <header class="container">
             <div id="box" >
                 <h1>Data Penginap</h1>
-                <form style="margin-top:10%; margin-left:10%; margin-right:10%; margin-bottom: 3%;" method="POST" action="<?php echo base_url('CheckIn/ambilkamar') ?>">
+                <form style="margin-top:10%; margin-left:10%; margin-right:10%; margin-bottom: 3%;" method="POST" action="<?php echo base_url('CheckIn/ambilkamar') ?>" onsubmit="return confirm('Apakah anda sudah yakin?');">
                         <div class="row">
                           <div class="col-sm-4">
                             <label for="namaLengkap" style="color: white">Nama Lengkap</label>

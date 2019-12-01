@@ -25,7 +25,7 @@
 
             <?php if ($check) : ?>
                 <form method="POST" action="<?php echo base_url('CheckOut/doCheckOut/');
-                                                echo $data[0]->id ?>">
+                                                echo $data[0]->id ?>" onsubmit="return JSalert();">
                     <h1 style="margin-bottom: 5%;">Detail Penginap</h1>
                     <div class="row">
                         <div class="col-sm-4">
@@ -87,7 +87,7 @@
                             <input type="text" class="form-control" name='biaya' id="biaya" placeholder="<?php echo "Rp.",number_format($this->CheckOutModel->getbiaya($data[0])) ?>" readonly>
                         </div>
                     </div>
-                    <button type="submit" class="btn btn-primary" style="margin-left: 40%; margin-top: 5%">Submit</button>
+                    <button type="submit" class="btn btn-primary" style="margin-left: 40%; margin-top: 5%">Check Out</button>
         </div>
 
         </div>
