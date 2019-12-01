@@ -24,7 +24,7 @@
         <div id="box" >
             
             <?php if ($check): ?>
-                <form method="POST" action="<?php echo base_url('CheckOut/doCheckOut/'); echo $data[0]->id ?>">
+                <form method="POST"  action="<?php echo base_url('CheckOut/doCheckOut/'); echo $data[0]->id ?>">
             <h1 style="margin-bottom: 5%;">Detail Penginap</h1>
                 <div class="row">
                     <div class="col-sm-4">
@@ -66,7 +66,7 @@
                         <input type="text" class="form-control" name='tanggalmasuk' id="tanggalmasuk"  placeholder="<?php echo $data[0]->tanggal ?>" readonly>
                     </div>
                     </div>
-                        <button type="submit" class="btn btn-primary" style="margin-left: 40%; margin-top: 5%">Submit</button>
+                        <button type="submit"  class="btn btn-primary" style="margin-left: 40%; margin-top: 5%">Cek Out</button>
                     </div>
                 </div>
                     
@@ -76,6 +76,28 @@
             
         </div>
     </header>
+    <script type="text/javascript">
+        function JSalert(){
+	        swal({   title: "Your account will be deleted permanently!",   
+            text: "Are you sure to proceed?",   
+            type: "warning",   
+            showCancelButton: true,   
+            confirmButtonColor: "#DD6B55",   
+            confirmButtonText: "Yes, Remove My Account!",   
+            cancelButtonText: "No, I am not sure!",   
+            closeOnConfirm: false,   
+            closeOnCancel: false }, 
+            function(isConfirm){   
+                if (isConfirm) 
+                {   
+                    swal("Account Removed!", "Your account is removed permanently!", "success");   
+                } 
+                else {     
+                    swal("Hurray", "Account is not removed!", "error");   
+                } 
+            });
+        }
+    </script>
 </body>
 
 
