@@ -10,7 +10,7 @@
     border-radius: 40px;
     border-style: solid;
     border-color: white;
-    margin-top: 20%;
+    margin-top: 10%;
 }
 h1{
     color: white;
