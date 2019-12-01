@@ -29,6 +29,11 @@ class CheckInModel extends CI_Model {
         $result=$this->db->get();
         return $result;
     }
+    public function getdata($id) {
+        $this->db->where('id',$id);
+        $result = $this->db->get('check_in');
+        return $result;
+    }
 }
 
 ?>

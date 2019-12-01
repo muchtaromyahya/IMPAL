@@ -6,7 +6,7 @@ class KamarModel extends CI_Model {
             $data = [
                 'terisi' => '1'
             ];
-        } else {
+        } else if ($check == 'check_out') {
             $data = [
                 'terisi'=> '0'
             ];
@@ -16,6 +16,15 @@ class KamarModel extends CI_Model {
     }
     public function getallkamar() {
         $this->db->where('terisi','0');
+        $result=$this->db->get('kamar');
+        return $result;
+    }
+    public function getall() {
+        $result=$this->db->get('kamar');
+        return $result;
+    }
+    public function getkamar($nokamar) {
+        $this->db->where('no_kamar',$nokamar);
         $result=$this->db->get('kamar');
         return $result;
     }

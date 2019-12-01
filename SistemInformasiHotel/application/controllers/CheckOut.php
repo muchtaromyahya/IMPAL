@@ -39,12 +39,10 @@ class CheckOut extends CI_Controller {
         ];
         if ($this->CheckInModel->updatecheckin($id)) {
             $this->db->insert('check_out',$data);
+            $this->KamarModel->updatekamar($data['no_kamar'],'check_out');
+            $this->CheckOutModel->addkwitansi($id);
             
         } 
         redirect('CheckOut');
-        
-        
-        
-
     }
 }
