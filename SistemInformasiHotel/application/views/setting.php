@@ -9,16 +9,24 @@
                             </button>
                         </div>
                         <div class="modal-body">
+                        <label for="exampleInputPassword1" style=""><h4 style="text-align:center">UBAH NAMA </h4></label><br>
+                        <label for="exampleInputPassword1" style=""><i>ubah nama dibawah apabila ingin mengganti nama </i></label>
+
                             <div class="form-group">
-                                <label for="exampleInputEmail1">Nama</label>
+                                <label for="exampleInputEmail1"><b>Nama </b></label>
                                 <input value="<?php echo $_SESSION['name'] ?>" type="text" name="nama" pattern="[A-Za-z\s]{1,}" oninvalid="this.setCustomValidity('Nama tidak valid, angka tidak boleh masuk')" oninput="setCustomValidity('')" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukkan Nama" required>
+                            </div><br>
+                            <div class="">
+                                <label for="exampleInputPassword1" style=""><h4 style="text-align:center">GANTI PASSWORD </h4></label><br>
+                                <label for="exampleInputPassword1" style=""><i>isi dengan password yang diinginkan </i></label>
+
                             </div>
                             <div class="form-group">
-                                <label for="exampleInputPassword1">Password</label>
+                                <label for="exampleInputPassword1"><b>Password</b></label>
                                 <input name=password pattern=".{6,}" oninvalid="this.setCustomValidity('Password harus 6 karakter atau lebih')" oninput="setCustomValidity('')" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" required>
                             </div>
                             <div class="form-group">
-                                <label for="exampleInputPassword1">Re-Enter Password</label>
+                                <label for="exampleInputPassword1"><b>Re-Enter Password </b></label>
                                 <input type="password" pattern=".{6,}" oninvalid="this.setCustomValidity('Password harus 6 karakter atau lebih')" oninput="setCustomValidity('')" name=repassword class="form-control" id="exampleInputPassword1" placeholder="Re-enter Password" required>
                             </div>
 
