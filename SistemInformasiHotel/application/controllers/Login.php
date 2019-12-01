@@ -2,8 +2,13 @@
 
 class Login extends CI_Controller {
     public function index() {
-        $this->load->view('partial');
-        $this->load->view('login');
+        if (isset($_SESSION['logged_in'])) {
+            redirect('Home');
+            
+        } else {
+            $this->load->view('partial');
+            $this->load->view('login');
+        }
     }
 
     public function signin() {
@@ -34,5 +39,3 @@ class Login extends CI_Controller {
         
     }
 }
-
-?>
