@@ -6,7 +6,7 @@
 <style>
 #box{
     width: 100%;
-    height: 80%;
+    height: 60%;
     border-radius: 40px;
     border-style: solid;
     border-color: white;
@@ -36,7 +36,7 @@ h1{
                               <label for="nik" style="color: white">NIK</label>
                             </div>
                             <div class="col-sm-8">
-                              <input type="text" class="form-control" name='nik' id="NIK"  placeholder="NIK" oninvalid="this.setCustomValidity('NIK Harus Diisi')" oninput="setCustomValidity('')" required>
+                               <input type="text" class="form-control" name='nik' id="NIK"  placeholder="NIK" oninvalid="this.setCustomValidity('NIK Harus Diisi')" oninput="setCustomValidity('')" required>
                             </div>
                         </div> <br>
                         <div class="row">

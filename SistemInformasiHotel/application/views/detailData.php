@@ -1,12 +1,13 @@
 <html>
+    
 <style>
-    #box {
+    #box{
         width: 100%;
-        height: 80%;
+        height: 60%;
         border-radius: 40px;
         border-style: solid;
         border-color: white;
-        margin-top: 20%;
+        margin-top: 10%;
     }
 
     h1 {
@@ -18,40 +19,51 @@
 
 <body background="<?php echo base_url('application\views\assets\home1.jpeg'); ?>">
     <header class="container">
-        <div id="box">
+        <div id="box" >
             <?php if ($check): ?>
-            <h1>Detail Pelanggan</h1>
-            <form style="margin-top:10%; margin-left:10%; margin-right:10%; margin-bottom: 3%;" method="POST" action="<?php echo base_url('CheckIn/ambilkamar') ?>">
-
+            <h1 style="margin-button:10%;">Detail Penginap</h1>
                 <div class="row">
-                <div class="col-sm-4">
-                        <label for="namaLengkap" style="color: white">Nama Lengkap  : <?php echo $data[0]->nama ?></label>
-                    </div>
-                    <div class="col-sm-8">
-                    </div>
                     <div class="col-sm-4">
-                        <label for="namaLengkap" style="color: white">NIK           : <?php echo $data[0]->nik ?></label>
+                        <label for="namaLengkap" style="color: white">Nama Lengkap</label>
                     </div>
                     <div class="col-sm-8">
+                        <input type="text" class="form-control" name='nama' id="namaLengkap"  placeholder="<?php echo $data[0]->nama ?>" readonly>
                     </div>
+                </div> <br>
+                <div class="row">
                     <div class="col-sm-4">
-                        <label for="namaLengkap" style="color: white">No Kamar      : <?php echo $data[0]->no_kamar ?></label>
+                        <label for="nik" style="color: white">NIK</label>
                     </div>
                     <div class="col-sm-8">
+                        <input type="text" class="form-control" name='nik' id="NIK"  placeholder="<?php echo $data[0]->nik ?>" readonly>
                     </div>
+                </div> <br>
+                <div class="row">
                     <div class="col-sm-4">
-                        <label for="namaLengkap" style="color: white">Fasilitas     : <?php echo $data[0]->id_fasilitas ?></label>
+                        <label for="noKamar" style="color: white; margin-right: 20px; ">No Kamar</label> 
                     </div>
                     <div class="col-sm-8">
-                    </div>
+                        <input type="text" class="form-control" name='kamar' id="kamar"  placeholder="<?php echo $data[0]->no_kamar ?>" readonly>
+                    </div> 
+                </div> <br>
+                <div class="row">
                     <div class="col-sm-4">
-                        <label for="namaLengkap" style="color: white">Tanggal Masuk : <?php echo $data[0]->tanggal ?></label>
+                        <label for="fasilitas" style="color: white; margin-right: 43px;">Fasilitas</label>
                     </div>
                     <div class="col-sm-8">
+                        <input type="text" class="form-control" name='fasilitas' id="fasilitas"  placeholder="<?php echo $data[0]->id_fasilitas ?>" readonly>
+                    </div>
+                </div> <br>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <label for="fasilitas" style="color: white; margin-right: 43px;">Tanggal Masuk</label>
+                    </div>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" name='tanggalmasuk' id="tanggalmasuk"  placeholder="<?php echo $data[0]->tanggal ?>" readonly>
                     </div>
                 </div>
-            </form>
-
+                    </div>
+            </div>
             <?php endif; ?>
         </div>
     </header>
