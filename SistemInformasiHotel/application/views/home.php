@@ -32,7 +32,7 @@ img{
         <div class="row rowhotel">
             <div class="col-sm-4"><a href="<?php echo base_url('Fasilitas') ?>"><img src="<?php echo base_url('application\views\assets\icon_hotel_impal\icons\facilities_id2.png'); ?>"> </a></div>
             <div class="col-sm-4"><a href="<?php echo base_url('Laporan') ?>"><img src="<?php echo base_url('application\views\assets\icon_hotel_impal\icons\report_id2.png'); ?>"></a></div>
-            <div class="col-sm-4"><img src="<?php echo base_url('application\views\assets\icon_hotel_impal\icons\settings_id2.png'); ?>"></div>
+            <div class="col-sm-4"><img src="<?php echo base_url('application\views\assets\settings_id2.png'); ?>"></div>
         </div>
 
     </div>
