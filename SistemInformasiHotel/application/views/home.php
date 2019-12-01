@@ -17,7 +17,7 @@
     <div class="container" >
         <p class="title" style="text-align: center; margin-bottom: 10%; margin-top: 10%;">Sistem Informasi Hotel Telkom</p>
         <div class="row rowhotel" style="margin-bottom:5%;">
-            <div class="col-sm-4"><p class="title">Menu 1</p></div>
+            <div class="col-sm-4"><img src="assets/icon_hotel_impal/checkin_en1"></div>
             <div class="col-sm-4"> <p class="title">Menu 2</p> </div>
             <div class="col-sm-4"><p class="title">Menu 3</p></div>
         </div>
