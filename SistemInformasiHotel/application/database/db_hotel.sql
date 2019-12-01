@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 01, 2019 at 11:14 AM
+-- Generation Time: Dec 01, 2019 at 07:46 PM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 7.2.12
 
@@ -39,16 +39,7 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`username`, `password`, `name`) VALUES
-('admin1', 'admin123', 'Admin 1'),
-('admin10', 'admin123', 'Admin 10'),
-('admin2', 'admin123', 'Admin 2'),
-('admin3', 'admin123', 'Admin 3'),
-('admin4', 'admin123', 'Admin 4'),
-('admin5', 'admin123', 'Admin 5'),
-('admin6', 'admin123', 'Admin 6'),
-('admin7', 'admin123', 'Admin 7'),
-('admin8', 'admin123', 'Admin 8'),
-('admin9', 'admin123', 'Admin 9');
+('admin1', '0192023a7bbd73250516f069df18b500', 'Gery Nugroho Witing');
 
 -- --------------------------------------------------------
 
@@ -71,8 +62,10 @@ CREATE TABLE `check_in` (
 --
 
 INSERT INTO `check_in` (`id`, `id_fasilitas`, `no_kamar`, `nik`, `admin`, `tanggal`, `is_checkout`) VALUES
+('586a970c-1458-11ea-acbb-2cfda181e8aa', 'A1', 102, '5203072503990007', 'admin1', '2019-12-01', 0),
 ('623cb893-141f-11ea-acbb-2cfda181e8aa', 'A1', 101, '1452151235', 'admin1', '2019-12-01', 1),
 ('66919b0d-141f-11ea-acbb-2cfda181e8aa', 'A1', 102, '12314215125', 'admin1', '2019-12-01', 1),
+('7bd11fd9-142a-11ea-acbb-2cfda181e8aa', 'A1', 101, '1452151235', 'admin1', '2019-12-01', 0),
 ('9f149401-1422-11ea-acbb-2cfda181e8aa', 'D4', 101, '1452151235', 'admin1', '2019-12-01', 1),
 ('c30ce455-1422-11ea-acbb-2cfda181e8aa', 'D3', 101, '1452151235', 'admin1', '2019-12-01', 1);
 
@@ -118,7 +111,8 @@ CREATE TABLE `customer` (
 
 INSERT INTO `customer` (`nik`, `nama`) VALUES
 ('12314215125', 'Hafizh wibu'),
-('1452151235', 'Arbi Nourman Baruni');
+('1452151235', 'Arbi Nourman Baruni'),
+('5203072503990007', 'Gery Nugroho');
 
 -- --------------------------------------------------------
 
@@ -174,8 +168,8 @@ CREATE TABLE `kamar` (
 --
 
 INSERT INTO `kamar` (`no_kamar`, `harga`, `terisi`) VALUES
-(101, 300000, 0),
-(102, 300000, 0),
+(101, 300000, 1),
+(102, 300000, 1),
 (103, 300000, 0),
 (104, 300000, 0),
 (105, 300000, 0),
