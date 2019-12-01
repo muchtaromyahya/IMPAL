@@ -19,7 +19,7 @@
                         <a class="nav-link js-scroll-trigger" href="<?php echo base_url('CheckOut') ?>"><p style="color: beige;">Check Out</p></a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#kamar"><p style="color: beige;">Kamar</p></a>
+                        <a class="nav-link js-scroll-trigger" href="<?php echo base_url('kamar') ?>"><p style="color: beige;">Kamar</p></a>
                       </li>
                       <li class="nav-item">
                         <a class="nav-link js-scroll-trigger" href="#fasilitas"><p style="color: beige;">Fasilitas</p></a>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+        <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <meta http-equiv="X-UA-Compatible" content="ie=edge">
+                <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+                <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+                <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+                <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+                    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.css">
+                    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.js"></script>
+                    <link href = "<?php echo base_url('application\views\icon\logo.png') ?>" rel="icon" type="image/png">
+            
+            </head>
+    <style>
+    .title {
+        text-align: center;
+        color: white;
+        font-size: 40px;
+        margin-top: 10%;
+    }
+
+    .datatable {
+        background-color: white;
+        /* width: 80%;
+        height: 100%; */
+        margin-left: 10%;
+        border-radius: 19px;
+        border-color: black;
+        border-style: solid;
+        padding: 5%;
+    }
+    </style>
+<body background="<?php echo base_url('application\views\assets\home1.jpeg'); ?>">
+    <div class="container">
+        <!-- <form style="margin-top: 10%;">      
+                <div>
+                    <p>Masukan Nama Penginap</p>
+                </div>
+                <div class="d-flex justify-content-center h-100">
+                        <div class="searchbar">
+                            <input class="search_input" type="text" name="" placeholder="Search...">
+                            <a href="#" class="search_icon"><i class="fas fa-search"></i></a>
+                        </div>
+                    </div>
+            </form> -->
+        <p class='title'> Nama Penginap</p>
+        <div class="datatable">
+            <table id="table_id" class="display" style="">
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>No. kamar</th>
+                        <th>Status</th> <!-- berisi keterangan "booked " atau "aviablea"-->
+                        <th>aksi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- <?php
+                    $data = $this->CheckInModel->getdatacheckin();
+                    $no = 1;
+                    foreach ($data->result() as $row) :
+                        ?> -->
+                        <tr>
+                            <td> <?php echo $no++; ?></td>
+                            <td><?php echo $row->nokamar; ?> </td>
+                            <td><?php echo $row->status; ?> </td>
+                            <td>
+                                <!-- <form method="POST" action="<?php echo base_url('CheckOut/getDetail/');
+                                                                echo $row->id ?>"><button type="submit" class="btn btn-primary">Detail</button> </form> -->
+                            </td>
+                        </tr>
+                    <?php endforeach; ?>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function() {
+            $('#table_id').DataTable();
+        });
+        $('#example').DataTable({
+            responsive: true
+        });
+    </script>
+</body>
+</html>
