@@ -1,5 +1,5 @@
 <html>
-    
+
 <style>
     #box{
         width: 100%;
@@ -8,6 +8,8 @@
         border-style: solid;
         border-color: white;
         margin-top: 10%;
+        padding-left: 10%;
+        padding-right:10%
     }
 
     h1 {
@@ -21,13 +23,13 @@
     <header class="container">
         <div id="box" >
             <?php if ($check): ?>
-            <h1 style="margin-button:10%;">Detail Penginap</h1>
+            <h1 style="margin-bottom: 5%;">Detail Penginap</h1>
                 <div class="row">
                     <div class="col-sm-4">
                         <label for="namaLengkap" style="color: white">Nama Lengkap</label>
                     </div>
-                    <div class="col-sm-8">
-                        <input type="text" class="form-control" name='nama' id="namaLengkap"  placeholder="<?php echo $data[0]->nama ?>" readonly>
+                    <div class="col-sm-8" >
+                        <input type="text"  class="form-control" name='nama' id="namaLengkap"  placeholder="<?php echo $data[0]->nama ?>" readonly>
                     </div>
                 </div> <br>
                 <div class="row">
