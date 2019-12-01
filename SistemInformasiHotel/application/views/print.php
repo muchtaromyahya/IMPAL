@@ -27,7 +27,7 @@
 
             <?php if ($check) : ?>
                 <form method="POST" action="">
-                    <h1 style="margin-bottom: 5%;">Detail Laporan</h1>
+                    <h1 style="margin-bottom: 5%;">Bukti Pembayaran Hotel Telkom</h1>
                     <div class="row">
                         <div class="col-sm-4">
                             <label for="namaLengkap" style="color: white">Nama Lengkap</label>
@@ -97,9 +97,6 @@
                             <input type="text" class="form-control" name='biaya' id="biaya" placeholder="<?php echo "Rp.",number_format($this->CheckOutModel->getbiaya($data[0])) ?>" readonly>
                         </div>
                     </div>
-                    <button type="submit" style="margin-left: 40%; margin-top: 5%" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
-          print
-        </button>
         </div>
 
         </div>
