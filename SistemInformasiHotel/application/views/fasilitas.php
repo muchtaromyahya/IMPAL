@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
         <head>
-            <title>Data Kamar</title>   
+            <title>Data Fasilitas</title>   
             </head>
     <style>
     .title {
@@ -41,7 +41,7 @@
                 <thead>
                     <tr>
                         <th>No</th>
-                        <th>ID Fasilitas</th>
+                        <th>No. Fasilitas</th>
                         <th>Harga</th> <!-- berisi keterangan "booked " atau "aviablea"-->
                         <!-- <th>aksi</th> -->
                     </tr>

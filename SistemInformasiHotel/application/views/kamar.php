@@ -35,13 +35,13 @@
                         </div>
                     </div>
             </form> -->
-        <p class='title'> Nama Penginap</p>
+        <p class='title'> Data Kamar</p>
         <div class="datatable">
             <table id="table_id" class="display" style="">
                 <thead>
                     <tr>
                         <th>No</th>
-                        <th>No. Fasilitas</th>
+                        <th>No. Kamar</th>
                         <th>Status</th> <!-- berisi keterangan "booked " atau "aviablea"-->
                         <!-- <th>aksi</th> -->
                     </tr>
