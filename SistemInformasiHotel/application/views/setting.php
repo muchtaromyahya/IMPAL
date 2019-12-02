@@ -27,7 +27,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputPassword1"><b>Re-Enter Password </b></label>
-                                <input type="password" pattern=".{6,}" oninvalid="this.setCustomValidity('Password harus 6 karakter atau lebih')" oninput="setCustomValidity('')" name=repassword class="form-control" id="exampleInputPassword1" placeholder="Re-enter Password" required>
+                                <input type="password" pattern=".{6,}" oninvalid="this.setCustomValidity('Password harus 6 karakter atau lebih atau password tidak sama')" oninput="setCustomValidity('')" name=repassword class="form-control" id="exampleInputPassword1" placeholder="Re-enter Password" required>
                             </div>
 
                         </div>
