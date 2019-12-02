@@ -66,7 +66,7 @@
                 <?=$_SESSION['name']  ?>
               </button>
               <div class="dropdown-menu">
-                <a style="text-align:center;" class="dropdown-item" data-toggle="modal" data-target="#exampleModalCenter"> Setting </a>
+                <a style="text-align:center;cursor:pointer" class="dropdown-item" data-toggle="modal" data-target="#exampleModalCenter"> Setting </a>
                 <div class="dropdown-divider"></div>
                 <a style="text-align:center;" class="dropdown-item" href="<?php echo base_url('Login/signout') ?>">Log Out</a>
               </div>
