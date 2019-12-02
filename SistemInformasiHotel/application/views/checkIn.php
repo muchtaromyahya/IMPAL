@@ -7,7 +7,7 @@
 <style>
   #box {
     width: 100%;
-    height: 60%;
+    height: 100%;
     border-radius: 40px;
     border-style: solid;
     border-color: white;
