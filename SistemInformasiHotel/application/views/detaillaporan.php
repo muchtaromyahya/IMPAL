@@ -5,7 +5,7 @@
 <style>
     #box {
         width: 100%;
-        height: 75%;
+        height: 90%;
         border-radius: 40px;
         border-style: solid;
         border-color: white;
@@ -97,7 +97,7 @@
                             <input type="text" class="form-control" name='biaya' id="biaya" placeholder="<?php echo "Rp.",number_format($this->CheckOutModel->getbiaya($data[0])) ?>" readonly>
                         </div>
                     </div>
-                    <button type="submit" style="margin-left: 40%; margin-top: 5%" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+                    <button type="submit" style="margin-left: 40%; margin-top: 3%" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
           print
         </button>
         </div>

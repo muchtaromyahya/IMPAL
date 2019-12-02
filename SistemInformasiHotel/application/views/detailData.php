@@ -5,13 +5,14 @@
 <style>
     #box {
         width: 100%;
-        height: 70%;
+        height: 85%;
         border-radius: 40px;
         border-style: solid;
         border-color: white;
         margin-top: 10%;
-        padding-left: 10%;
-        padding-right: 10%
+        padding-left: 7%;
+        padding-right: 7%;
+        
     }
 
     h1 {

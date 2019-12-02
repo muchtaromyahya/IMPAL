@@ -15,7 +15,7 @@
         background-color: white;
         /* width: 80%;
         height: 100%; */
-        margin-left: 10%;
+        margin-left: 4%;
         border-radius: 19px;
         border-color: black;
         border-style: solid;
