@@ -11,7 +11,6 @@ create table admin(
 create table customer(
     nik varchar2(25) primary key,
     nama_cust varchar2(100),
-    status varchar2(50)
 );
 
 create table fasilitas(
